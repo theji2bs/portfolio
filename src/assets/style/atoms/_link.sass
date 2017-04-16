@@ -1,11 +1,18 @@
 a
   display: inline-block
+  text-decoration: none
+  color: $grey
 
   &.router-link-active
     cursor: default
 
   &.about-link
     padding: 0 0 10px 10px
+
+  &.about-close
+    p
+      font-size: 22px
+      +fontFamily($sofiaBlack)
 
 .about-link-top,
 .about-link-bottom

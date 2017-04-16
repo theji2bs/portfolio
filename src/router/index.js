@@ -14,17 +14,17 @@ export default new Router({
     },
     {
       path: '/home',
-      name: 'Home',
+      name: 'home',
       component: Home,
     },
     {
       path: '/about',
-      name: 'About',
+      name: 'about',
       component: About,
     },
     {
       path: '*',
-      redirect: 'Home',
+      redirect: 'home',
     },
   ],
 });
