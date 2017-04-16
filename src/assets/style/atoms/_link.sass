@@ -9,6 +9,13 @@ a
   &.about-link
     padding: 0 0 10px 10px
 
+    &:hover
+      .about-link-top
+        transform: scaleX(0.5)
+
+      .about-link-bottom
+        transform: scaleX(1.5)
+
   &.about-close
     p
       font-size: 22px
@@ -19,6 +26,8 @@ a
   display: block
   height: 4px
   background: $grey
+  transition: $mainTransition
+  transform-origin: left
 
 .about-link-top
   width: 60px
