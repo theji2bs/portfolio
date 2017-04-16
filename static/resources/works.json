@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "title": "Colloque Université de Montréal",
+    "description": "It is a site for an annual event of the University of Montreal: colloquium on the editorialization of the author on the digital level",
+    "type": "website",
+    "client": "Université de Montréal",
+    "role": "Front-end developer",
+    "date": "2016",
+    "link": "",
+    "cover": "",
+    "images": [
+      "/static/images/works/montreal/montreal1.png",
+      "/static/images/works/montreal/montreal2.png",
+      "/static/images/works/montreal/montreal3.png"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "SpotiRails",
+    "description": "It is a site for an annual event of the University of Montreal: colloquium on the editorialization of the author on the digital level",
+    "type": "website",
+    "client": "SpotiRails",
+    "role": "Front-end developer",
+    "date": "2016",
+    "link": "",
+    "cover": "",
+    "images": [
+      "/static/images/works/montreal/spotirails1.png",
+      "/static/images/works/montreal/spotirails2.png"
+    ]
+  }
+]

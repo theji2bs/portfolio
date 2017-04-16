@@ -1,0 +1,30 @@
+// Utils
+@import "./utils/reset"
+@import "./utils/variables"
+
+// Atoms
+@import "./atoms/image"
+@import "./atoms/link"
+@import "./atoms/text"
+@import "./atoms/title"
+
+// Molecules
+@import "./molecules/menu"
+
+body
+  background: $mainColor
+  color: $white
+
+.clearfix
+  clear: both
+
+.float-left,
+.float-right
+  width: 50%
+
+.float-left
+  float: left
+
+.float-right
+  float: right
+  text-align: right
