@@ -35,3 +35,26 @@ a
 .about-link-bottom
   width: 40px
   margin-top: 8px
+
+.scroll-button
+  display: flex
+  align-items: center
+  position: absolute
+  top: 15%
+  right: 80px
+  z-index: 10
+  cursor: pointer
+
+  &:hover
+    img
+      transform: translate3d(15px, 0, 0)
+
+  span
+    font-size: 14px
+    color: $grey
+    +fontFamily($austin)
+
+  img
+    width: 20px
+    margin-left: 15px
+    transition: $mainTransition
