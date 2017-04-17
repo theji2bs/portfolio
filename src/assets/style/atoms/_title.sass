@@ -2,14 +2,32 @@
   text-align: right
   position: absolute
   top: 60%
-  left: -10%
+  left: -15%
   z-index: 10
+  overflow: hidden
+
+  > *
+    opacity: 0
+    transform: translate3d(-100%, 0, 0)
+    transition: $mainTransition
 
   h2
     font-size: 24px
     +fontFamily($austin)
+    white-space: nowrap
 
   h3
     font-size: 16px
     color: $grey
     +fontFamily($sofia)
+
+  +mobile
+    left: 50%
+    top: 100%
+    transform: translate3d(-50%, 0, 0)
+
+    h2
+      font-size: 12px
+
+    h3
+      font-size: 8px

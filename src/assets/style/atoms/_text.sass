@@ -10,6 +10,9 @@
   > span
     display: inline-block
 
+  +mobile
+    left: -60px
+
 .carousel-work-date
   position: absolute
   top: -100px
@@ -20,5 +23,13 @@
   p
     font-size: 144px
     color: $grey
-    opacity: .3
+    opacity: 0
     +fontFamily($didot)
+    transform: translate3d(0, 100%, 0)
+    transition: $mainTransition
+
+  +mobile
+    top: -50px
+
+    p
+      font-size: 72px

@@ -4,6 +4,28 @@
   display: flex
   align-items: center
 
+  .carousel-work-container
+    opacity: .7
+
+  &.swiper-slide-active
+    .carousel-work-container
+      opacity: 1
+      cursor: default
+
+      .carousel-work-title
+        > *
+          transform: translate3d(0, 0, 0)
+          opacity: 1
+
+      .carousel-work-date
+        p
+          transform: translate3d(0, 0, 0)
+          opacity: .3
+
+  +mobile
+    width: 100%
+    margin-right: 0
+
 .swiper-pagination
   width: 60% !important
   text-align: right
@@ -18,6 +40,13 @@
     background: $khaki
     z-index: 10
 
+  +tablet
+    bottom: 40px !important
+
+  +mobile
+    width: 80% !important
+    bottom: 10px !important
+
 .swiper-pagination-bullet
   margin: 0 30px 0 0 !important
   opacity: 1
@@ -25,6 +54,17 @@
   height: initial
   border-radius: initial
   background: none
+
+  &:hover,
+  &:focus
+    &.swiper-pagination-bullet-active
+      cursor: default
+
+    .swiper-pagination-bullet-custom
+      background: $khaki
+
+    .bullet-index
+      color: $khaki
 
   &.swiper-pagination-bullet-active
     .swiper-pagination-bullet-custom
@@ -40,6 +80,7 @@
     background: $blackLight
     border-radius: 100%
     margin: 0 auto
+    transition: $mainTransition
 
   .bullet-index
     padding-top: 20px
@@ -47,3 +88,19 @@
     font-size: 14px
     color: $blackLight
     +fontFamily($sofia)
+    transition: $mainTransition
+
+  +mobile
+    &:hover,
+    &:focus
+      &.swiper-pagination-bullet-active
+        cursor: default
+
+      .swiper-pagination-bullet-custom
+        background: $blackLight
+
+      .bullet-index
+        color: $blackLight
+
+    .bullet-index
+      font-size: 7px

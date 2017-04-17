@@ -1,3 +1,16 @@
 // Font family
 =fontFamily($font)
   font-family: $font, Helvetica, Arial, sans-serif
+
+// Responsive
+=mobile
+  @media screen and (max-width: $mobileWidth)
+    @content
+
+=mobileLandscape
+  @media screen and (max-width: $mobileWidth) and (orientation: landscape)
+    @content
+
+=tablet
+  @media screen and (max-width: $tabletWidth)
+    @content

@@ -29,5 +29,65 @@
       "/static/images/works/montreal/spotirails1.png",
       "/static/images/works/montreal/spotirails2.png"
     ]
+  },
+  {
+    "id": 3,
+    "title": "SpotiRails",
+    "description": "It is a site for an annual event of the University of Montreal: colloquium on the editorialization of the author on the digital level",
+    "type": "website",
+    "client": "SpotiRails",
+    "role": "Front-end developer",
+    "date": "2016",
+    "link": "",
+    "cover": "/static/images/covers/work2.png",
+    "images": [
+      "/static/images/works/montreal/spotirails1.png",
+      "/static/images/works/montreal/spotirails2.png"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "SpotiRails",
+    "description": "It is a site for an annual event of the University of Montreal: colloquium on the editorialization of the author on the digital level",
+    "type": "website",
+    "client": "SpotiRails",
+    "role": "Front-end developer",
+    "date": "2016",
+    "link": "",
+    "cover": "/static/images/covers/work2.png",
+    "images": [
+      "/static/images/works/montreal/spotirails1.png",
+      "/static/images/works/montreal/spotirails2.png"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "SpotiRails",
+    "description": "It is a site for an annual event of the University of Montreal: colloquium on the editorialization of the author on the digital level",
+    "type": "website",
+    "client": "SpotiRails",
+    "role": "Front-end developer",
+    "date": "2016",
+    "link": "",
+    "cover": "/static/images/covers/work2.png",
+    "images": [
+      "/static/images/works/montreal/spotirails1.png",
+      "/static/images/works/montreal/spotirails2.png"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "SpotiRails",
+    "description": "It is a site for an annual event of the University of Montreal: colloquium on the editorialization of the author on the digital level",
+    "type": "website",
+    "client": "SpotiRails",
+    "role": "Front-end developer",
+    "date": "2016",
+    "link": "",
+    "cover": "/static/images/covers/work2.png",
+    "images": [
+      "/static/images/works/montreal/spotirails1.png",
+      "/static/images/works/montreal/spotirails2.png"
+    ]
   }
 ]

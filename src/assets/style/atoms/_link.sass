@@ -16,25 +16,37 @@ a
       .about-link-bottom
         transform: scaleX(1.5)
 
+    .about-link-top,
+    .about-link-bottom
+      display: block
+      height: 4px
+      background: $grey
+      transition: $mainTransition
+      transform-origin: left
+
+    .about-link-top
+      width: 60px
+
+    .about-link-bottom
+      width: 40px
+      margin-top: 8px
+
+    +mobile
+      .about-link-top,
+      .about-link-bottom
+        height: 2px
+
+      .about-link-top
+        width: 30px
+
+      .about-link-bottom
+        width: 20px
+        margin-top: 4px
+
   &.about-close
     p
       font-size: 22px
       +fontFamily($sofiaBlack)
-
-.about-link-top,
-.about-link-bottom
-  display: block
-  height: 4px
-  background: $grey
-  transition: $mainTransition
-  transform-origin: left
-
-.about-link-top
-  width: 60px
-
-.about-link-bottom
-  width: 40px
-  margin-top: 8px
 
 .scroll-button
   display: flex
@@ -46,6 +58,7 @@ a
   cursor: pointer
 
   &:hover
+  &:focus
     img
       transform: translate3d(15px, 0, 0)
 
@@ -53,8 +66,17 @@ a
     font-size: 14px
     color: $grey
     +fontFamily($austin)
+    user-select: none
 
   img
     width: 20px
     margin-left: 15px
     transition: $mainTransition
+
+  +mobile
+    right: 20px
+
+    &:hover
+    &:focus
+      img
+        transform: translate3d(0, 0, 0)
