@@ -108,20 +108,8 @@ a
 
 .about-socials
   a
-    display: inline-block
     font-size: 14px
-    +fontFamily($sofiaBlack)
-    padding: 10px
-    border: 1px solid $khaki
-    transform: skew($containerSkew)
-    transition: $mainTransition
-
-    &:hover
-      background: $khaki
-      color: $mainColor
-
-    p
-      transform: skew($childSkew)
+    +defaultLink
 
     +tablet
       font-size: 18px
@@ -130,3 +118,43 @@ a
     +mobile
       font-size: 12px
       padding: 5px
+
+.work-link
+  position: absolute
+  bottom: 130px
+  right: -70px
+
+  a
+    font-size: 16px
+    +defaultLink
+
+.next-work-ink
+  position: relative
+  font-size: 180px
+  +fontFamily($didot)
+  color: $khaki
+
+  &:hover
+    .next-work-title
+      background: transparent
+
+      p
+        color: $white
+
+  .next-work-title
+    position: absolute
+    top: 50%
+    left: 50%
+    display: inline-block
+    background: $white
+    border: 1px solid $white
+    transform: skew($containerSkew) translate3d(-50%, -50%, 0)
+    transition: $mainTransition
+
+    p
+      font-size: 14px
+      color: $mainColor
+      +fontFamily($sofiaBlack)
+      padding: 10px 80px
+      transform: skew($childSkew)
+      transition: $mainTransition

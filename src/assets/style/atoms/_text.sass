@@ -1,4 +1,5 @@
-.carousel-numbering
+.carousel-numbering,
+.work-numbering
   font-size: 12px
   color: $khaki
   +fontFamily($sofia)
@@ -62,3 +63,35 @@
 
   +mobileLandscape
     margin: 5px 0
+
+.work-scroll-container
+  p
+    font-size: 16px
+    +fontFamily($sofiaBlack)
+    color: $khaki
+
+.work-client
+  font-size: 72px
+  color: $khaki
+  +fontFamily($didot)
+  opacity: .2
+  position: absolute
+  top: -45px
+  left: 50%
+  transform: translate3d(-50%, 0, 0)
+
+.work-description-container
+  .title
+    font-size: 16px
+    color: $khaki
+    +fontFamily($austin)
+
+  .content
+    font-size: 16px
+    color: $grey
+    +fontFamily($sofia)
+    margin-left: 15px
+
+  .work-informations
+    .content
+      margin-right: 50px

@@ -14,3 +14,19 @@
 =tablet
   @media screen and (max-width: $tabletWidth)
     @content
+
+// Buttons
+=defaultLink
+  display: inline-block
+  +fontFamily($sofiaBlack)
+  padding: 10px
+  border: 1px solid $khaki
+  transform: skew($containerSkew)
+  transition: $mainTransition
+
+  &:hover
+    background: $khaki
+    color: $mainColor
+
+  p
+    transform: skew($childSkew)
