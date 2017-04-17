@@ -53,6 +53,10 @@ a
       font-size: 22px
       +fontFamily($sofiaBlack)
 
+    +mobile
+      p
+        font-size: 11px
+
 .scroll-button
   display: flex
   align-items: center
@@ -118,3 +122,11 @@ a
 
     p
       transform: skew($childSkew)
+
+    +tablet
+      font-size: 18px
+      padding: 15px
+
+    +mobile
+      font-size: 12px
+      padding: 5px

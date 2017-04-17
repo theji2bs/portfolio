@@ -15,3 +15,15 @@
     li
       display: inline-block
       margin: 0 20px
+
+  +tablet
+    &:after
+      right: 100%
+
+  +mobile
+    &:after
+      display: none
+
+    ul
+      li
+        margin: 0 5px
