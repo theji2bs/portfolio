@@ -49,8 +49,15 @@
                 </span>
             </div>
         </section>
-        <section class="work-collection">
-            <h1>Work collection</h1>
+        <section class="work-collection-container">
+            <ul>
+                <li v-for="(image, index) in work.images">
+                    <div class="work-collection-index">0{{ index + 1 }}</div>
+                    <div class="work-collection-image">
+                        <img :src="image">
+                    </div>
+                </li>
+            </ul>
         </section>
         <footer>
             <router-link class="next-work-ink" :to="{ name: 'work', params: { id: work.id + 1 }}">
@@ -83,7 +90,7 @@ export default{
 
     $('.work-scroll-wrapper').click(() => {
       $('html, body').animate({
-        scrollTop: $('#scroll').offset().top,
+        scrollTop: $('#scroll').offset().top - 65,
       }, 'slow');
     });
   },

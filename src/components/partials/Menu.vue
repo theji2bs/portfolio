@@ -21,7 +21,6 @@
             >
                 <div class="about-close-wrapper">
                     <p>close</p>
-                    <img class="close-button" src="/static/images/close-button.svg">
                 </div>
             </router-link>
         </div>

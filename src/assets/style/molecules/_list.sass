@@ -27,3 +27,46 @@
     ul
       li
         margin: 0 5px
+
+.work-collection-container
+  ul
+    width: 80%
+    margin: 0 auto
+    padding: 10% 0
+
+    li
+      margin-bottom: 15%
+
+      &:nth-child(odd)
+        .work-collection-image
+          position: relative
+
+          &:after
+            content: ''
+            position: absolute
+            top: 50%
+            right: -50%
+            width: 100%
+            height: 110%
+            border: 2px solid $khaki
+            transform: translate3d(0, -50%, 0)
+
+      &:nth-child(even)
+        .work-collection-image
+          position: relative
+
+          &:after
+            content: ''
+            position: absolute
+            top: 50%
+            left: -50%
+            width: 100%
+            height: 110%
+            border: 2px solid $khaki
+            transform: translate3d(0, -50%, 0)
+
+        .work-collection-index
+          text-align: right
+
+      &:last-child
+        margin-bottom: 0
