@@ -44,6 +44,11 @@ a
         margin-top: 4px
 
   &.about-close
+    transition: $mainTransition
+
+    &:hover
+      opacity: .7
+
     p
       font-size: 22px
       +fontFamily($sofiaBlack)
@@ -80,3 +85,36 @@ a
     &:focus
       img
         transform: translate3d(0, 0, 0)
+
+.about-description
+  a
+    transition: $mainTransition
+
+    &:hover,
+    &:focus
+      opacity: .7
+
+    &.hetic
+      color: $khaki
+      +fontFamily($sofiaBlack)
+
+    &.resume
+      color: $khaki
+      text-decoration: underline
+
+.about-socials
+  a
+    display: inline-block
+    font-size: 14px
+    +fontFamily($sofiaBlack)
+    padding: 10px
+    border: 1px solid $khaki
+    transform: skew($containerSkew)
+    transition: $mainTransition
+
+    &:hover
+      background: $khaki
+      color: $mainColor
+
+    p
+      transform: skew($childSkew)
