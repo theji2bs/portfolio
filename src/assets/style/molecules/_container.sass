@@ -21,6 +21,12 @@
       transform: translate3d(0, 0, 0)
       opacity: 1
 
+  +mobile
+    width: 80%
+
+  +mobileLandscape
+    width: 40%
+
 .about-container
   width: 100%
   height: 100%
@@ -59,5 +65,27 @@
     display: flex
     justify-content: space-between
 
+    .group
+      display: flex
+      margin-right: 50px
+
+  +mobile
+    .work-description
+      padding: 40px 0
+
+    .work-informations
+      flex-wrap: wrap
+
+      .group
+        padding: 15px 0
+        margin: 0
+        width: 100%
+        display: flex
+        justify-content: space-between
+
+  +mobile
+    padding: 0 5%
+
 .work-collection-container
   background: $white
+  overflow: hidden

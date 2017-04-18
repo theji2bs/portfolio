@@ -128,6 +128,21 @@ a
     font-size: 16px
     +defaultLink
 
+  +mobile
+    width: 100%
+    right: 50%
+    bottom: -90px
+    transform: translate3d(50%, 0, 0)
+
+  +mobileLandscape
+    width: auto
+    right: -50%
+    bottom: 50%
+    transform: translate3d(0, 50%, 0)
+
+    a
+      font-size: 14px
+
 .next-work-ink
   position: relative
   font-size: 180px
@@ -158,3 +173,17 @@ a
       padding: 10px 80px
       transform: skew($childSkew)
       transition: $mainTransition
+
+  +mobile
+    font-size: 90px
+
+    &:hover
+      .next-work-title
+        background: $white
+
+        p
+          color: $mainColor
+
+    .next-work-title
+      p
+        padding: 5px 40px

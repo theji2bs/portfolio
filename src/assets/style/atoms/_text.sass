@@ -77,8 +77,13 @@
   opacity: .2
   position: absolute
   top: -45px
-  left: 50%
-  transform: translate3d(-50%, 0, 0)
+  left: 0
+  width: 100%
+  text-align: center
+
+  +mobile
+    font-size: 28px
+    top: -14px
 
 .work-description-container
   .title
@@ -92,9 +97,9 @@
     +fontFamily($sofia)
     margin-left: 15px
 
-  .work-informations
+  +mobile
     .content
-      margin-right: 50px
+      text-align: right
 
 .work-collection-index
   font-size: 130px
