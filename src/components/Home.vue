@@ -4,7 +4,7 @@
             <span>scroll</span>
             <img  src="/static/images/right-arrow.svg">
         </div>
-        <swiper :options="swiperOption">
+        <swiper :options="swiperOption" ref="mySwiper">
             <swiper-slide v-for="work in works" :key="work.id">
                 <router-link
                         class="carousel-work-link"
@@ -34,6 +34,7 @@
 </template>
 
 <script>
+  import $ from 'jquery';
   import works from '../utils/globals';
 
   export default{
@@ -43,25 +44,42 @@
         works: [],
         isLastSlide: false,
         swiperOption: {
+          notNextTick: true,
           mousewheelControl: true,
           slidesPerView: 'auto',
           centeredSlides: true,
           spaceBetween: 250,
-          nextButton: '.scroll-button',
           pagination: '.swiper-pagination',
           paginationClickable: true,
-          paginationBulletRender(swiper, index, className) {
+          paginationBulletRender(thisSwiper, index, className) {
             return `<span class="${className}"><span class="swiper-pagination-bullet-custom"></span><span class="bullet-index">0${index + 1}</span></span>`;
           },
           slideToClickedSlide: true,
           keyboardControl: true,
+          autoplay: 500,
         },
       };
     },
+    computed: {
+      swiper() {
+        return this.$refs.mySwiper.swiper;
+      },
+    },
     mounted() {
+      this.swiper.stopAutoplay();
+      console.log('swiper', this.swiper);
       works.query().then((response) => {
         this.works = response.data;
       });
+      $('.scroll-button').hover(() => {
+        console.log('hover');
+        this.swiper.startAutoplay();
+      }, () => {
+        this.swiper.stopAutoplay();
+      });
+    },
+    beforeDestroy() {
+      this.$off();
     },
   };
 </script>
