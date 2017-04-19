@@ -1,5 +1,5 @@
 <template>
-    <div class="work">
+    <div class="work" :key="work.id">
         <header>
             <div class="work-container">
                 <img class="work-cover" :src="work.cover">

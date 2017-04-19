@@ -68,12 +68,10 @@
     },
     mounted() {
       this.swiper.stopAutoplay();
-      console.log('swiper', this.swiper);
       works.query().then((response) => {
         this.works = response.data;
       });
       $('.scroll-button').hover(() => {
-        console.log('hover');
         this.swiper.startAutoplay();
       }, () => {
         this.swiper.stopAutoplay();
