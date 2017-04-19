@@ -119,10 +119,14 @@ a
       font-size: 12px
       padding: 5px
 
+.carousel-work-link,
 .work-link
   position: absolute
   bottom: 130px
   right: -70px
+  opacity: 0
+  transform: translate3d(-100%, 0, 0)
+  transition: $mainTransition
 
   a
     font-size: 16px
@@ -185,7 +189,8 @@ a
       transition: $mainTransition
 
   +mobile
-    font-size: 90px
+    font-size: 60px
+    margin: 0 15px
 
     &:hover
       .next-work-title,
@@ -198,4 +203,5 @@ a
     .next-work-title,
     .prev-work-title
       p
-        padding: 5px 40px
+        font-size: 12px
+        padding: 5px 10px

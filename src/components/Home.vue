@@ -6,27 +6,28 @@
         </div>
         <swiper :options="swiperOption" ref="mySwiper">
             <swiper-slide v-for="work in works" :key="work.id">
-                <router-link
-                        class="carousel-work-link"
-                        :to="{ name: 'work', params: { id: work.id }}"
-                >
-                    <div class="carousel-work-container">
-                        <img class="carousel-work-cover" :src="work.cover">
-                        <div class="carousel-work-date">
-                            <p>{{work.date}}</p>
-                        </div>
-                        <div class="carousel-numbering">
-                            <span class="carousel-total">0{{works.length}}</span>
-                            <span class="numbering-separator"></span>
-                            <span class="carousel-current">0{{work.id}}</span>
-                        </div>
-                        <div class="carousel-work-title">
-                            <h2>{{work.title}}</h2>
-                            <h3>{{work.role}}</h3>
-                            <div class="title-separator"></div>
-                        </div>
+                <div class="carousel-work-container">
+                    <img class="carousel-work-cover" :src="work.cover">
+                    <div class="carousel-work-date">
+                        <p>{{work.date}}</p>
                     </div>
-                </router-link>
+                    <div class="carousel-numbering">
+                        <span class="carousel-total">0{{works.length}}</span>
+                        <span class="numbering-separator"></span>
+                        <span class="carousel-current">0{{work.id}}</span>
+                    </div>
+                    <div class="carousel-work-title">
+                        <h2>{{work.title}}</h2>
+                        <h3>{{work.role}}</h3>
+                        <div class="title-separator"></div>
+                    </div>
+                    <router-link
+                            class="carousel-work-link"
+                            :to="{ name: 'work', params: { id: work.id }}"
+                    >
+                        <a :href="work.link" target="_blank"><p>Learn more</p></a>
+                    </router-link>
+                </div>
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
@@ -56,7 +57,7 @@
           },
           slideToClickedSlide: true,
           keyboardControl: true,
-          autoplay: 500,
+          autoplay: 250,
         },
       };
     },
