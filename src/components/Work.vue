@@ -60,10 +60,27 @@
             </ul>
         </section>
         <footer>
-            <router-link class="next-work-ink" :to="{ name: 'work', params: { id: work.id + 1 }}">
-                <p>Next</p>
-                <span class="next-work-title"><p>{{ nextWork.title }}</p></span>
-            </router-link>
+            <div class="prev-work float-left">
+                <router-link
+                        class="prev-work-ink"
+                        :to="{ name: 'work', params: { id: work.id - 1 }}"
+                        v-if="!isFirstWork"
+                >
+                    <p>Prev</p>
+                    <span class="prev-work-title"><p>{{ prevWork.title }}</p></span>
+                </router-link>
+            </div>
+            <div class="next-work float-right">
+                <router-link
+                        class="next-work-ink"
+                        :to="{ name: 'work', params: { id: work.id + 1 }}"
+                        v-if="!isLastWork"
+                >
+                    <p>Next</p>
+                    <span class="next-work-title"><p>{{ nextWork.title }}</p></span>
+                </router-link>
+            </div>
+            <div class="clearfix"></div>
         </footer>
     </div>
 </template>
@@ -78,14 +95,16 @@ export default{
     return {
       work: {},
       nextWork: {},
+      prevWork: {},
       works: [],
+      isLastWork: false,
+      isFirstWork: false,
     };
   },
   mounted() {
     works.query().then((response) => {
       this.works = response.data;
-      this.work = this.works.find(this.currentWork);
-      this.nextWork = this.works[this.work.id + 1];
+      this.resourcesDefinition();
     });
 
     $('.work-scroll-wrapper').click(() => {
@@ -95,14 +114,26 @@ export default{
     });
   },
   methods: {
-    currentWork(work) {
+    resourcesDefinition() {
+      this.work = this.works.find(this.findCurrentWork);
+      this.nextWork = this.works.find(this.findNextWork);
+      this.prevWork = this.works.find(this.findPrevWork);
+      this.isLastWork = this.work.id === this.works.length;
+      this.isFirstWork = this.work.id === 1;
+    },
+    findCurrentWork(work) {
       return work.id === parseInt(this.$route.params.id, 10);
+    },
+    findNextWork(work) {
+      return work.id === parseInt(parseInt(this.$route.params.id, 10) + 1, 10);
+    },
+    findPrevWork(work) {
+      return work.id === parseInt(parseInt(this.$route.params.id, 10) - 1, 10);
     },
   },
   watch: {
     $route() {
-      this.work = this.works.find(this.currentWork);
-      this.nextWork = this.works[this.work.id + 1];
+      this.resourcesDefinition();
     },
   },
 };

@@ -143,20 +143,30 @@ a
     a
       font-size: 14px
 
-.next-work-ink
+.prev-work
+  text-align: right
+
+.next-work
+  text-align: left !important
+
+.next-work-ink,
+.prev-work-ink
+  margin: 0 50px
   position: relative
   font-size: 180px
   +fontFamily($didot)
   color: $khaki
 
   &:hover
-    .next-work-title
+    .next-work-title,
+    .prev-work-title
       background: transparent
 
       p
         color: $white
 
-  .next-work-title
+  .next-work-title,
+  .prev-work-title
     position: absolute
     top: 50%
     left: 50%
@@ -178,12 +188,14 @@ a
     font-size: 90px
 
     &:hover
-      .next-work-title
+      .next-work-title,
+      .prev-work-title
         background: $white
 
         p
           color: $mainColor
 
-    .next-work-title
+    .next-work-title,
+    .prev-work-title
       p
         padding: 5px 40px
